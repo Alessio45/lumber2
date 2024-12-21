@@ -81,8 +81,8 @@ while true do
             local args = { [1] = partName }
             game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Christmas Sleigh: Claim"):InvokeServer(unpack(args))
             sendWebhook(partName)
-            wait(1)
+            wait(_G.invokeDelay)
         end
     end
-    wait(0.1)
+    wait(_G.checkDelay)
 end
